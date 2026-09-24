@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Бесплатный мини-план Queenagers: одна силовая тренировка, прогулки и простая опора в питании.">
+  <title>Собери свою неделю — Queenagers × #Sekta</title>
+  <style>
+    :root {
+      --ink: #17151d;
+      --paper: #f7f4ed;
+      --white: #fffdf9;
+      --acid: #d9ff3f;
+      --violet: #7147ff;
+      --violet-dark: #4a2bc5;
+      --coral: #ff6651;
+      --lilac: #e8e0ff;
+      --blue: #dceeff;
+      --muted: #716d78;
+      --line: rgba(23, 21, 29, .14);
+      --shadow: 8px 9px 0 var(--ink);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .page { overflow: hidden; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+    .topbar {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { font-size: 20px; font-weight: 900; letter-spacing: -.06em; }
+    .brand span { color: var(--violet); }
+    .top-note { color: var(--muted); font-size: 13px; text-align: right; }
+
+    .hero { padding: 72px 0 86px; }
+    .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 70px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .13em;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 4px; border-radius: 10px; background: var(--coral); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 760px;
+      margin: 25px 0 25px;
+      font-size: clamp(56px, 8vw, 106px);
+      line-height: .86;
+      letter-spacing: -.095em;
+    }
+    h1 em { color: var(--violet); font-style: normal; display: block; }
+    .hero-copy { max-width: 650px; font-size: clamp(19px, 2.2vw, 27px); line-height: 1.18; letter-spacing: -.035em; }
+    .hero-subcopy { max-width: 550px; margin: 24px 0 0; color: var(--muted); font-size: 16px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 52px; padding: 0 21px; border-radius: 999px;
+      font-size: 15px; font-weight: 900; text-decoration: none; border: 1px solid var(--ink);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 5px 0 var(--ink); }
+    .btn-primary { background: var(--acid); }
+    .btn-secondary { background: transparent; }
+
+    .hero-art { position: relative; min-height: 430px; }
+    .orb {
+      position: absolute; width: 360px; height: 360px; right: 4%; top: 12px;
+      border-radius: 50%; background: var(--violet); transform: rotate(-8deg);
+      box-shadow: 17px 17px 0 var(--acid);
+    }
+    .orb::before, .orb::after { content: ""; position: absolute; border-radius: 50%; border: 2px solid rgba(255,255,255,.42); }
+    .orb::before { inset: 28px; }
+    .orb::after { inset: 66px; border-color: rgba(255,255,255,.22); }
+    .art-label { position: absolute; z-index: 2; right: 22%; top: 86px; color: #fff; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+    .art-number { position: absolute; z-index: 2; right: 10%; top: 135px; color: var(--acid); font-size: 142px; font-weight: 950; line-height: .8; letter-spacing: -.12em; }
+    .art-card {
+      position: absolute; z-index: 3; left: 0; bottom: 20px; width: min(360px, 84%);
+      padding: 22px; border-radius: 20px; background: var(--white); border: 1px solid var(--ink); box-shadow: var(--shadow);
+      transform: rotate(4deg);
+    }
+    .art-card strong { display: block; font-size: 18px; line-height: 1.05; margin-bottom: 10px; }
+    .art-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .mini-pill { display: inline-flex; align-items: center; padding: 7px 10px; background: var(--coral); color: #fff; border-radius: 999px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+
+    .intro { padding: 28px 0 84px; }
+    .intro-box {
+      display: grid; grid-template-columns: .7fr 1.3fr; gap: 45px; align-items: start;
+      padding: 45px; border-radius: var(--radius); background: var(--ink); color: #fff;
+    }
+    .intro-box h2 { max-width: 330px; margin: 0; color: var(--acid); font-size: clamp(31px, 4vw, 52px); line-height: .94; letter-spacing: -.07em; }
+    .intro-box p { max-width: 620px; margin: 0; color: #d6d2dc; font-size: 19px; }
+    .intro-box b { color: #fff; }
+
+    .section { padding: 85px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+    .section-head h2 { max-width: 650px; margin: 0; font-size: clamp(39px, 6vw, 75px); line-height: .9; letter-spacing: -.085em; }
+    .section-head p { max-width: 350px; margin: 0; color: var(--muted); }
+
+    .week-section { background: var(--lilac); }
+    .week-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .day {
+      min-height: 196px; padding: 20px; border: 1px solid var(--ink); border-radius: 19px; background: var(--white);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .day.featured { grid-column: span 2; min-height: 280px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .day.rest { background: var(--ink); color: #fff; }
+    .day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .day-name { font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
+    .day-mark { font-size: 20px; }
+    .day h3 { margin: 25px 0 5px; font-size: 24px; line-height: 1; letter-spacing: -.05em; }
+    .day p { margin: 0; color: var(--muted); font-size: 14px; }
+    .rest p { color: #c9c5cf; }
+    .day-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 18px; font-size: 13px; font-weight: 900; text-decoration: none; }
+    .day-link span { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: var(--ink); color: var(--acid); }
+    .plan-note { margin-top: 19px; color: var(--muted); font-size: 13px; }
+
+    .workout-section { background: var(--coral); }
+    .workout-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 26px; align-items: stretch; }
+    .workout-visual { position: relative; min-height: 470px; padding: 30px; overflow: hidden; border-radius: var(--radius); background: var(--violet); color: #fff; }
+    .workout-visual::before { content: ""; position: absolute; width: 300px; height: 300px; right: -70px; bottom: -100px; border-radius: 50%; border: 45px solid var(--acid); opacity: .95; }
+    .workout-visual::after { content: "25"; position: absolute; right: 21px; bottom: 39px; font-size: 130px; line-height: .8; font-weight: 950; letter-spacing: -.13em; color: var(--ink); }
+    .workout-visual h3 { position: relative; z-index: 1; max-width: 300px; margin: 35px 0 0; font-size: 53px; line-height: .87; letter-spacing: -.08em; }
+    .workout-visual .mini-pill { position: relative; z-index: 1; background: var(--acid); color: var(--ink); }
+    .workout-info { padding: 35px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--ink); }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .meta span { padding: 8px 11px; border-radius: 999px; background: var(--blue); font-size: 12px; font-weight: 900; }
+    .workout-info h2 { margin-bottom: 14px; font-size: clamp(34px, 5vw, 60px); line-height: .9; letter-spacing: -.08em; }
+    .workout-info > p { max-width: 570px; color: var(--muted); font-size: 17px; }
+    .sequence { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 29px 0; }
+    .sequence div { min-height: 95px; padding: 15px; border-radius: 16px; background: var(--paper); }
+    .sequence b { display: block; margin-bottom: 7px; color: var(--violet); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .sequence span { font-size: 14px; font-weight: 800; line-height: 1.05; }
+    .workout-note { margin: 22px 0 0; padding: 16px 18px; border-left: 4px solid var(--violet); background: var(--lilac); font-size: 14px; }
+
+    .food-section { background: var(--blue); }
+    .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+    .food-card { padding: 32px; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--white); }
+    .food-card.accent { background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .food-card h3 { margin: 18px 0 10px; font-size: 31px; line-height: .95; letter-spacing: -.06em; }
+    .food-card p { color: var(--muted); }
+    .accent p { color: var(--ink); }
+    .food-steps { display: grid; gap: 12px; margin-top: 22px; }
+    .food-step { display: flex; gap: 13px; align-items: start; }
+    .food-step b { display: grid; flex: 0 0 30px; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--violet); color: #fff; font-size: 13px; }
+    .food-step span { padding-top: 4px; font-size: 14px; font-weight: 800; }
+    .food-example { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .food-example span { padding: 9px 11px; border-radius: 10px; background: var(--paper); font-size: 13px; font-weight: 800; }
+
+    .close { padding: 86px 0 100px; background: var(--ink); color: #fff; }
+    .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: end; }
+    .close h2 { max-width: 760px; margin: 0; color: var(--acid); font-size: clamp(43px, 7vw, 88px); line-height: .87; letter-spacing: -.09em; }
+    .close-copy { color: #d0ccd5; font-size: 17px; }
+    .close-copy strong { color: #fff; }
+    .close .btn-secondary { color: #fff; border-color: rgba(255,255,255,.45); }
+    footer { padding: 22px 0; background: var(--ink); border-top: 1px solid rgba(255,255,255,.14); color: #a9a4b0; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .workout-layout, .close-grid { grid-template-columns: 1fr; gap: 35px; }
+      .hero { padding-top: 55px; }
+      .hero-art { min-height: 370px; max-width: 600px; width: 100%; margin: 0 auto; }
+      .week-grid { grid-template-columns: repeat(2, 1fr); }
+      .day.featured { grid-column: span 2; }
+      .close-grid { align-items: start; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(var(--max), calc(100% - 28px)); }
+      .top-note { display: none; }
+      .hero { padding: 44px 0 55px; }
+      .hero-grid { gap: 22px; }
+      h1 { font-size: clamp(51px, 17vw, 82px); }
+      .hero-copy { font-size: 20px; }
+      .hero-art { min-height: 310px; }
+      .orb { width: 250px; height: 250px; right: 3%; }
+      .art-label { top: 63px; right: 22%; font-size: 10px; }
+      .art-number { top: 97px; right: 10%; font-size: 101px; }
+      .art-card { bottom: 8px; width: 78%; padding: 17px; }
+      .intro, .section { padding: 58px 0; }
+      .intro-box { grid-template-columns: 1fr; gap: 22px; padding: 27px; }
+      .section-head { display: block; margin-bottom: 27px; }
+      .section-head h2 { margin: 15px 0 17px; }
+      .week-grid { gap: 10px; }
+      .day, .day.featured { min-height: 175px; padding: 15px; }
+      .day.featured { min-height: 235px; }
+      .day h3 { font-size: 20px; }
+      .day p { font-size: 13px; }
+      .workout-visual { min-height: 300px; padding: 24px; }
+      .workout-visual h3 { margin-top: 28px; font-size: 45px; }
+      .workout-visual::after { font-size: 100px; }
+      .workout-info, .food-card { padding: 24px; }
+      .sequence { grid-template-columns: 1fr; }
+      .sequence div { min-height: auto; }
+      .food-grid { grid-template-columns: 1fr; gap: 14px; }
+      .footer-inner { display: block; }
+      .footer-inner span { display: block; margin-top: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">#SEKTA <span>×</span> QUEENAGERS</div>
+        <div class="top-note">мини-план на неделю<br>для большой жизни</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <div class="eyebrow">Бесплатный мини-план</div>
+            <h1>Собери свою <em>неделю</em></h1>
+            <p class="hero-copy">Одна силовая тренировка из Queenagers, прогулки и простая опора в питании.</p>
+            <p class="hero-subcopy">Не нужно превращать тренировки в отдельный проект. Посмотри, как сила, выносливость и обычная жизнь могут уживаться в одной неделе.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#workout">Открыть тренировку <span>↗</span></a>
+              <a class="btn btn-secondary" href="#plan">Посмотреть план</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Визуальная карточка лид-магнита">
+            <div class="orb"></div>
+            <div class="art-label">one week</div>
+            <div class="art-number">01</div>
+            <div class="art-card">
+              <span class="mini-pill">внутри</span>
+              <strong>Силовая на всё тело<br>+ 3 прогулки</strong>
+              <p>План, который можно встроить в уже полную жизнь.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="wrap">
+          <div class="intro-box">
+            <h2>Тренироваться — не значит жить по расписанию тренировок.</h2>
+            <p>В Queenagers есть настоящая нагрузка и понятная структура, но нет требования быть идеальной. В этой неделе мы оставили только главное: <b>силу, движение и еду, которая поддерживает энергию</b>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section week-section" id="plan">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Неделя 1 · план</div>
+              <h2>Сила — в понедельник. Движение — всю неделю.</h2>
+            </div>
+            <p>В бесплатном плане открыта одна полноценная силовая тренировка. Остальные дни показывают ритм недели, частью которой она становится.</p>
+          </div>
+
+          <div class="week-grid">
+            <article class="day featured">
+              <div class="day-top"><span class="day-name">ПН · сила</span><span class="day-mark">✦</span></div>
+              <div><h3>Тренировка на всё тело</h3><p>25 минут · суставная гимнастика, силовой блок и координация.</p><a class="day-link" href="#workout">Открыть тренировку <span>↗</span></a></div>
+            </article>
+            <article class="day"><div class="day-top"><span class="day-name">ВТ · кардио</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут в удобном темпе.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">СР · сила</span><span class="day-mark">✦</span></div><div><h3>Ещё одна опора</h3><p>В полном курсе — силовой блок на ягодицы, пресс и спину.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">ЧТ · кардио</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут движения без спортивного подвига.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">ПТ · баланс</span><span class="day-mark">◌</span></div><div><h3>Мобильность</h3><p>В полном курсе — 20 минут мобильности суставов и баланса.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">СБ · кардио</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут — в одиночестве, с подругой или по дороге по делам.</p></div></article>
+            <article class="day rest"><div class="day-top"><span class="day-name">ВС · пауза</span><span class="day-mark">—</span></div><div><h3>Полный отдых</h3><p>Восстановление тоже входит в план.</p></div></article>
+          </div>
+          <p class="plan-note">* План собран по актуальному листу «Тренировочный план_6 недель» Queenagers 2026. В лид-магните доступна одна тренировка; остальные элементы показывают структуру недели курса.</p>
+        </div>
+      </section>
+
+      <section class="section workout-section" id="workout">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Материал из курса</div>
+              <h2>Проверь, как тебе такая сила.</h2>
+            </div>
+            <p>Не «зарядка для возраста», а полноценная работа с телом — с понятным входом и возможностью настроить объём под себя.</p>
+          </div>
+
+          <div class="workout-layout">
+            <div class="workout-visual">
+              <span class="mini-pill">Queenagers 2026 · неделя 1</span>
+              <h3>Силовая<br>на всё тело</h3>
+            </div>
+            <div class="workout-info">
+              <div class="meta"><span>25 минут</span><span>гантели</span><span>Даша + Алла</span></div>
+              <h2>Основная тренировка</h2>
+              <p>Начинаем с суставной гимнастики, затем переходим к силовому блоку на всё тело и заканчиваем координацией.</p>
+              <div class="sequence" aria-label="Структура тренировки">
+                <div><b>01 · вход</b><span>Суставная гимнастика</span></div>
+                <div><b>02 · работа</b><span>Силовой блок на всё тело</span></div>
+                <div><b>03 · финал</b><span>Координация</span></div>
+              </div>
+              <a class="btn btn-primary" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Смотреть тренировку <span>↗</span></a>
+              <div class="workout-note"><b>Настрой объём под себя.</b> Можно сделать полную тренировку, сократить её или сегодня выбрать прогулку. Часть тренировки — уже больше, чем ничего.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section food-section">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Питание недели</div>
+              <h2>Еда — тоже часть силы.</h2>
+            </div>
+            <p>Один простой фокус вместо новой диеты и списка запретов.</p>
+          </div>
+          <div class="food-grid">
+            <article class="food-card accent">
+              <span class="mini-pill">фокус недели</span>
+              <h3>Добавь белковую опору в привычный приём пищи.</h3>
+              <p>Белок — часть обычного рациона, а не отдельный фитнес-проект. Не нужно переделывать всю жизнь за один день.</p>
+              <div class="food-example"><span>яйца</span><span>рыба</span><span>птица</span><span>мясо</span><span>бобовые</span><span>молочные продукты</span></div>
+            </article>
+            <article class="food-card">
+              <span class="eyebrow">как попробовать</span>
+              <div class="food-steps">
+                <div class="food-step"><b>1</b><span>Выбери один привычный приём пищи.</span></div>
+                <div class="food-step"><b>2</b><span>Проверь, есть ли в нём белковая часть.</span></div>
+                <div class="food-step"><b>3</b><span>Добавь её без запретов и компенсаций.</span></div>
+              </div>
+              <p style="margin:24px 0 0">В полном курсе питание соединяется с тренировками, энергией и задачами конкретной недели.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="close" id="course">
+        <div class="wrap close-grid">
+          <h2>Сильное тело для большой жизни.</h2>
+          <div class="close-copy">
+            <p>Это только один фрагмент Queenagers. В полной программе — последовательные силовые тренировки, работа с выносливостью и центром тела, питание, знания и понятный путь дальше.</p>
+            <p><strong>Тренироваться можно по-разному. Оставаться активной — по-своему.</strong></p>
+            <div class="actions"><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Посмотреть курсы #SEKTA <span>↗</span></a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>#SEKTA × QUEENAGERS</span>
+        <span>Собери свою неделю · мини-план</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
