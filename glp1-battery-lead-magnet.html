@@ -24,6 +24,7 @@
       --pink-ink: #763851;
       --danger: #9b3c38;
       --yellow-soft: #f2ead1;
+      --yellow-strong: #dfc54f;
       --yellow-ink: #685a27;
       --shadow: 0 18px 48px rgba(20, 24, 21, .09);
     }
@@ -227,6 +228,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: background .35s ease, color .35s ease;
     }
 
     .battery-percent {
@@ -364,6 +366,7 @@
 
     .charge-fill {
       height: 0%;
+      width: 100%;
       align-self: flex-end;
       background: var(--mint-strong);
       transition: height .35s ease, background .35s ease;
@@ -547,12 +550,12 @@
       <div>
         <p class="eyebrow">Мини-практика из курса GLP-1</p>
         <h1>Какая тренировка тебе сегодня по силам?</h1>
-        <p class="hero-copy">Проверь заряд своей <strong>«батарейки»</strong> и выбери подходящую нагрузку. Здесь есть три реальных видео из курса: короткое кардио, тренировка уровня 1 и тренировка уровня 2.</p>
+        <p class="hero-copy">Проверь заряд своей <strong>«батарейки»</strong> и выбери подходящую нагрузку. Здесь есть три видео из курса: короткое кардио, тренировка уровня 1 и тренировка уровня 2.</p>
         <div class="hero-actions">
           <a class="button mint" href="#battery">Проверить батарейку</a>
           <a class="button secondary" href="#workouts">Посмотреть тренировки</a>
         </div>
-        <p class="hero-note">Это не нужно проходить как челлендж: в один день выбери одну нагрузку и ориентируйся на текущее самочувствие.</p>
+        <p class="hero-note">В один день выбери одну нагрузку и ориентируйся на текущее самочувствие.</p>
       </div>
       <div class="battery-visual" aria-hidden="true">
         <div class="battery-hero-object">
@@ -571,7 +574,7 @@
       <div class="section-heading">
         <p class="section-kicker">Шаг 01 · самочувствие</p>
         <h2>Сначала проверь заряд</h2>
-        <p>Ответь на три вопроса перед тренировкой. Заряд не нужно сохранять на всю неделю: сегодня батарейка может быть жёлтой, а завтра — снова зелёной.</p>
+        <p>Ответь на три вопроса перед тренировкой. Заряд может меняться в течение недели, и это нормально: сегодня батарейка может быть жёлтой, а завтра — снова зелёной.</p>
       </div>
 
       <div class="battery-layout">
@@ -636,7 +639,7 @@
           <h3>Кардио с простыми шагами</h3>
           <p>Короткий вариант, с которого можно начать знакомство с логикой «батарейки».</p>
           <a class="button secondary workout-link" data-url="https://kinescope.io/qiWPWCpkU1QNXvnpAkJHZd" href="https://kinescope.io/qiWPWCpkU1QNXvnpAkJHZd" target="_blank" rel="noopener">Открыть тренировку</a>
-          <div class="recommendation-note">Подходит, если хочется начать с короткой нагрузки.</div>
+          <div class="recommendation-note">Подходит, если хочется начать с короткой тренировки с небольшим уровнем нагрузки.</div>
         </article>
 
         <article class="workout-card" data-type="level1">
@@ -644,13 +647,13 @@
           <h3>Тренировка на всё тело без оборудования</h3>
           <p>Вариант для бережного входа, возвращения после перерыва или дня, когда хочется меньше нагрузки.</p>
           <a class="button secondary workout-link" data-url="https://kinescope.io/3JBqdpJkqXF1eMbdAhQSqM" href="https://kinescope.io/3JBqdpJkqXF1eMbdAhQSqM" target="_blank" rel="noopener">Открыть тренировку</a>
-          <div class="recommendation-note">Если не уверена, с какого уровня начать, начни с этого.</div>
+          <div class="recommendation-note">Если сомневаешься, с какого уровня начать, начни с этого.</div>
         </article>
 
         <article class="workout-card" data-type="level2">
           <div class="card-top"><div class="card-index">03</div><div class="card-meta">уровень 2<br>21 минута · 3/4</div></div>
           <h3>Тренировка на всё тело с функциональными элементами</h3>
-          <p>Вариант для тех, кто уже регулярно тренируется и хорошо переносит привычную нагрузку.</p>
+          <p>Вариант для тех, кто уже регулярно тренируется и хорошо себя чувствует.</p>
           <a class="button secondary workout-link" data-url="https://kinescope.io/d8JxRDF8SKQht6L9QuwDHf" href="https://kinescope.io/d8JxRDF8SKQht6L9QuwDHf" target="_blank" rel="noopener">Открыть тренировку</a>
           <div class="recommendation-note">Выбирай, если уровень 2 уже соответствует твоей регулярной нагрузке.</div>
         </article>
@@ -675,7 +678,7 @@
         <h2>Здесь важна не максимальная нагрузка, а та, которую можно поддерживать.</h2>
       </div>
       <div class="cta-copy">
-        <p>В полном шестинедельном курсе есть два уровня, меню, белковый калькулятор и кураторская поддержка. Курс не меняет лечение и не заменяет лечащего врача.</p>
+        <p>В полной версии курса — шесть недель тренировок на выбор из двух уровней нагрузки, меню, белковый конструктор и поддержка куратора. Курс не назначает и не меняет терапию и не заменяет врача.</p>
         <a class="button" href="https://olymarkes.github.io/sekta-glp1-course/course-preview.html#program" target="_blank" rel="noopener">Посмотреть курс</a>
       </div>
     </section>
@@ -694,6 +697,8 @@
     const resultHeading = document.getElementById('resultHeading');
     const resultCopy = document.getElementById('resultCopy');
     const chargeFill = document.getElementById('chargeFill');
+    const charge = document.querySelector('.charge');
+    const heroScreen = document.querySelector('.battery-screen');
     const heroPercent = document.getElementById('heroPercent');
     const heroCaption = document.getElementById('heroCaption');
     const workoutCards = [...document.querySelectorAll('.workout-card')];
@@ -706,7 +711,10 @@
         percent: 0,
         hero: 'Сегодняшний заряд',
         copy: '<p>После этого здесь появится подходящий вариант нагрузки на сегодня.</p>',
-        fill: 'var(--line)'
+        fill: 'var(--line)',
+        ink: 'var(--muted)',
+        heroFill: 'var(--mint)',
+        heroInk: 'var(--mint-ink)'
       },
       green: {
         tag: 'Зелёный заряд',
@@ -714,7 +722,10 @@
         percent: 100,
         hero: 'Сегодня энергии достаточно',
         copy: '<p>Самочувствие обычное, энергии достаточно. Выбери свой привычный уровень. Если сомневаешься между уровнями, начни с уровня 1.</p><p>Не нужно дополнительно усложнять упражнения или повторять тренировку: выбери одну нагрузку на сегодня.</p>',
-        fill: 'var(--mint-strong)'
+        fill: 'var(--mint-strong)',
+        ink: 'var(--mint-ink)',
+        heroFill: 'var(--mint)',
+        heroInk: 'var(--mint-ink)'
       },
       yellow: {
         tag: 'Жёлтый заряд',
@@ -722,7 +733,10 @@
         percent: 55,
         hero: 'Энергии сегодня меньше',
         copy: '<p>Выбери более лёгкий вариант или выполни только часть тренировки. Можно снизить темп, добавить паузы и использовать более лёгкое сопротивление.</p><p>Если во время тренировки самочувствие ухудшается, остановись.</p>',
-        fill: 'var(--yellow-soft)'
+        fill: 'var(--yellow-strong)',
+        ink: 'var(--yellow-ink)',
+        heroFill: 'var(--yellow-soft)',
+        heroInk: 'var(--yellow-ink)'
       },
       red: {
         tag: 'Красный заряд',
@@ -730,7 +744,10 @@
         percent: 18,
         hero: 'Сегодня нужен отдых',
         copy: '<p>Пропусти тренировку. Не переноси её на следующий день и не пытайся компенсировать пропуск повышенной нагрузкой.</p><p>Если хочется двигаться и самочувствие позволяет, можно немного пройтись или сделать несколько комфортных движений. Отдых тоже подходит.</p>',
-        fill: 'var(--pink)'
+        fill: 'var(--pink)',
+        ink: 'var(--pink-ink)',
+        heroFill: 'var(--pink)',
+        heroInk: 'var(--pink-ink)'
       }
     };
 
@@ -775,8 +792,11 @@
       resultCopy.innerHTML = state.copy + (warning ? '<p class="alert"><strong>Не тренируйся и обратись за медицинской помощью.</strong> Перечисленные симптомы требуют оценки специалиста.</p>' : '');
       chargeFill.style.height = state.percent + '%';
       chargeFill.style.background = state.fill;
+      charge.setAttribute('aria-label', 'Заряд батарейки: ' + (state.percent ? state.percent + '%' : 'не определён'));
       heroPercent.textContent = state.percent ? state.percent + '%' : '—';
       heroCaption.textContent = state.hero;
+      heroScreen.style.background = state.heroFill;
+      heroScreen.style.color = state.heroInk;
       updateRecommendations(level);
     }
 
