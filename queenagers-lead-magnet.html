@@ -50,9 +50,8 @@
     .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 70px; align-items: center; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .13em;
+      color: var(--violet-dark); font-size: 14px; font-weight: 800;
     }
-    .eyebrow::before { content: ""; width: 28px; height: 4px; border-radius: 10px; background: var(--coral); }
     h1, h2, h3, p { margin-top: 0; }
     h1 {
       max-width: 760px;
@@ -93,7 +92,7 @@
     }
     .art-card strong { display: block; font-size: 18px; line-height: 1.05; margin-bottom: 10px; }
     .art-card p { margin: 0; color: var(--muted); font-size: 14px; }
-    .mini-pill { display: inline-flex; align-items: center; padding: 7px 10px; background: var(--coral); color: #fff; border-radius: 999px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+    .mini-pill { display: inline-flex; align-items: center; padding: 7px 10px; background: var(--coral); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 800; }
 
     .intro { padding: 28px 0 84px; }
     .intro-box {
@@ -118,7 +117,7 @@
     .day.featured { grid-column: span 2; min-height: 280px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
     .day.rest { background: var(--ink); color: #fff; }
     .day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-    .day-name { font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
+    .day-name { font-size: 13px; font-weight: 800; }
     .day-mark { font-size: 20px; }
     .day h3 { margin: 25px 0 5px; font-size: 24px; line-height: 1; letter-spacing: -.05em; }
     .day p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -148,7 +147,7 @@
     .workout-info > p { max-width: 570px; color: var(--muted); font-size: 17px; }
     .sequence { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 29px 0; }
     .sequence div { min-height: 95px; padding: 15px; border-radius: 16px; background: var(--paper); }
-    .sequence b { display: block; margin-bottom: 7px; color: var(--violet); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .sequence b { display: block; margin-bottom: 7px; color: var(--violet); font-size: 12px; font-weight: 800; }
     .sequence span { font-size: 14px; font-weight: 800; line-height: 1.05; }
     .workout-note { margin: 22px 0 0; padding: 16px 18px; border-left: 4px solid var(--violet); background: var(--lilac); font-size: 14px; }
 
@@ -220,8 +219,8 @@
   <div class="page">
     <header class="topbar">
       <div class="wrap topbar-inner">
-        <div class="brand">#SEKTA <span>×</span> QUEENAGERS</div>
-        <div class="top-note">мини-план на неделю<br>для большой жизни</div>
+        <div class="brand">#SEKTA <span>/</span> QUEENAGERS</div>
+        <div class="top-note">Небольшой план на неделю<br>для женщин 45+</div>
       </div>
     </header>
 
@@ -229,23 +228,20 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
-            <div class="eyebrow">Бесплатный мини-план</div>
-            <h1>Собери свою <em>неделю</em></h1>
-            <p class="hero-copy">Одна силовая тренировка для женщин 45+, прогулки и простая опора в питании.</p>
-            <p class="hero-subcopy">Мы собираем Queenagers как курс для большой жизни: с понятной нагрузкой, заботой о теле и ритмом, который можно встроить в свои дни.</p>
+            <div class="eyebrow">Для женщин 45+</div>
+            <h1>Неделя, в которой есть <em>место движению</em></h1>
+            <p class="hero-copy">Силовая тренировка, прогулки и простая опора в питании — без гонки и необходимости соответствовать чужому темпу.</p>
+            <p class="hero-subcopy">Мы собираем Queenagers — курс о том, как поддерживать силу и подвижность и при этом оставлять в жизни место для всего остального.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="#workout">Открыть тренировку <span>↗</span></a>
-              <a class="btn btn-secondary" href="#plan">Посмотреть план</a>
+              <a class="btn btn-primary" href="#workout">Посмотреть тренировку</a>
+              <a class="btn btn-secondary" href="#plan">Посмотреть неделю</a>
             </div>
           </div>
           <div class="hero-art" aria-label="Визуальная карточка лид-магнита">
             <div class="orb"></div>
-            <div class="art-label">one week</div>
-            <div class="art-number">01</div>
             <div class="art-card">
-              <span class="mini-pill">внутри</span>
-              <strong>Силовая на всё тело<br>+ 3 прогулки</strong>
-              <p>План, который можно встроить в уже полную жизнь.</p>
+              <strong>Силовая тренировка<br>и три прогулки</strong>
+              <p>Ритм, который можно подстроить под себя.</p>
             </div>
           </div>
         </div>
@@ -254,8 +250,8 @@
       <section class="intro">
         <div class="wrap">
           <div class="intro-box">
-            <h2>Тренироваться — не значит жить по расписанию тренировок.</h2>
-            <p>Мы хотим, чтобы в Queenagers была настоящая нагрузка и понятная структура — без требования быть идеальной. В этой неделе предлагаем только главное: <b>силу, движение и еду, которая поддерживает энергию</b>.</p>
+            <h2>Движение не должно занимать всю жизнь.</h2>
+            <p>В Queenagers мы хотим соединить настоящую нагрузку и понятную структуру с обычной жизнью. Начать можно с одной тренировки, нескольких прогулок и небольших изменений в питании — без требования быть идеальной.</p>
           </div>
         </div>
       </section>
@@ -264,23 +260,23 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="eyebrow">Один из возможных ритмов</div>
-              <h2>Сила — в понедельник. Движение — всю неделю.</h2>
+              <div class="eyebrow">Пример недели</div>
+              <h2>Один силовой день, несколько прогулок и время на отдых.</h2>
             </div>
-            <p>Предлагаем начать с одной полноценной силовой тренировки, поддержать её прогулками и оставить место для восстановления.</p>
+            <p>Так может выглядеть одна из недель. Её можно повторить целиком или выбрать из неё только то, что подходит тебе сейчас.</p>
           </div>
 
           <div class="week-grid">
             <article class="day featured">
-              <div class="day-top"><span class="day-name">ПН · сила</span><span class="day-mark">✦</span></div>
-              <div><h3>Тренировка на всё тело</h3><p>25 минут · суставная гимнастика, силовой блок и координация.</p><a class="day-link" href="#workout">Открыть тренировку <span>↗</span></a></div>
+              <div class="day-top"><span class="day-name">Понедельник</span></div>
+              <div><h3>Силовая тренировка</h3><p>25 минут: суставная гимнастика, силовой блок и координация.</p><a class="day-link" href="#workout">Посмотреть тренировку</a></div>
             </article>
-            <article class="day"><div class="day-top"><span class="day-name">ВТ · движение</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Запустить</button><span class="timer-status">После — 5 минут отдыха</span></div></div></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">СР · сила</span><span class="day-mark">✦</span></div><div><h3>Ещё одна опора</h3><p>В будущем курсе можно будет добавить силовой блок на ягодицы, пресс и спину.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">ЧТ · движение</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут движения без спортивного подвига.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Запустить</button><span class="timer-status">После — 5 минут отдыха</span></div></div></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">ПТ · баланс</span><span class="day-mark">◌</span></div><div><h3>Мобильность</h3><p>Мягкая практика для подвижности суставов и баланса.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">СБ · движение</span><span class="day-mark">↗</span></div><div><h3>Прогулка</h3><p>30 минут — в одиночестве, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Запустить</button><span class="timer-status">После — 5 минут отдыха</span></div></div></div></article>
-            <article class="day rest"><div class="day-top"><span class="day-name">ВС · пауза</span><span class="day-mark">—</span></div><div><h3>Полный отдых</h3><p>Окей посвятить этот день только отдыху и заняться чем-то любимым. Восстановление тоже часть ритма.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Иди 30 минут в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>В дальнейшем можно добавить упражнения для ягодиц, пресса и спины.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Четверг</span></div><div><h3>Прогулка</h3><p>Ещё 30 минут движения в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Пятница</span></div><div><h3>Мобильность</h3><p>Небольшая практика для подвижности суставов и равновесия.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Суббота</span></div><div><h3>Прогулка</h3><p>Можно пройтись одной, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
+            <article class="day rest"><div class="day-top"><span class="day-name">Воскресенье</span></div><div><h3>Отдых</h3><p>Сегодня можно ничего не планировать: посвятить время отдыху и заняться чем-то любимым.</p></div></article>
           </div>
         </div>
       </section>
@@ -289,28 +285,28 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="eyebrow">Пример тренировки</div>
-              <h2>Посмотри, как может выглядеть такая сила.</h2>
+              <div class="eyebrow">Силовая тренировка</div>
+              <h2>Вот как может выглядеть одна тренировка.</h2>
             </div>
-            <p>Это не «зарядка для возраста», а полноценная работа с телом — с понятным входом и возможностью настроить объём под себя.</p>
+            <p>Спокойная и полноценная работа с телом, в которой есть время освоиться и понять, какой объём нагрузки тебе подходит.</p>
           </div>
 
           <div class="workout-layout">
             <div class="workout-visual">
-              <span class="mini-pill">Queenagers · женщины 45+</span>
+              <span class="mini-pill">Для женщин 45+</span>
               <h3>Силовая<br>на всё тело</h3>
             </div>
             <div class="workout-info">
-              <div class="meta"><span>25 минут</span><span>гантели</span><span>Алла · мама Оли Маркес</span></div>
+              <div class="meta"><span>25 минут</span><span>гантели</span><span>Алла, мама Оли Маркес</span></div>
               <h2>Силовая на всё тело</h2>
-              <p>Предлагаем начинать с суставной гимнастики, затем переходить к силовому блоку на всё тело и заканчивать координацией. Тренировку ведёт Алла — мама Оли Маркес.</p>
+              <p>В начале — суставная гимнастика, затем силовой блок на всё тело и спокойное завершение с упражнениями на координацию. Тренировку ведёт Алла, мама Оли Маркес.</p>
               <div class="sequence" aria-label="Структура тренировки">
-                <div><b>01 · вход</b><span>Суставная гимнастика</span></div>
-                <div><b>02 · работа</b><span>Силовой блок на всё тело</span></div>
-                <div><b>03 · финал</b><span>Координация</span></div>
+                <div><b>Начало</b><span>Суставная гимнастика</span></div>
+                <div><b>Основная часть</b><span>Силовой блок на всё тело</span></div>
+                <div><b>Завершение</b><span>Упражнения на координацию</span></div>
               </div>
-              <a class="btn btn-primary" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть пример <span>↗</span></a>
-              <div class="workout-note"><b>Настрой объём под себя.</b> Можно сделать полную тренировку, сократить её или сегодня выбрать прогулку. Часть тренировки — уже больше, чем ничего.</div>
+              <a class="btn btn-primary" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a>
+              <div class="workout-note"><b>Выбирай подходящий объём.</b> Можно выполнить всю тренировку или остановиться раньше. Важно, чтобы нагрузка подходила тебе сегодня.</div>
             </div>
           </div>
         </div>
@@ -320,26 +316,26 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="eyebrow">Питание недели</div>
-              <h2>Еда — тоже часть силы.</h2>
+              <div class="eyebrow">Питание</div>
+              <h2>Поддерживать себя можно с простых вещей.</h2>
             </div>
-            <p>Один простой фокус вместо новой диеты и списка запретов.</p>
+            <p>Один понятный ориентир вместо новой диеты и длинного списка запретов.</p>
           </div>
           <div class="food-grid">
             <article class="food-card accent">
-              <span class="mini-pill">фокус недели</span>
-              <h3>Добавь белковую опору в привычный приём пищи.</h3>
-              <p>Белок — часть обычного рациона, а не отдельный фитнес-проект. Не нужно переделывать всю жизнь за один день.</p>
+              <span class="mini-pill">Один ориентир</span>
+              <h3>Пусть в одном из привычных приёмов пищи будет что-то белковое.</h3>
+              <p>Это может быть обычная еда: яйца, рыба, птица, мясо, бобовые или молочные продукты. Не нужно менять весь рацион за один день.</p>
               <div class="food-example"><span>яйца</span><span>рыба</span><span>птица</span><span>мясо</span><span>бобовые</span><span>молочные продукты</span></div>
             </article>
             <article class="food-card">
-              <span class="eyebrow">как попробовать</span>
+              <span class="eyebrow">Как начать</span>
               <div class="food-steps">
                 <div class="food-step"><b>1</b><span>Выбери один привычный приём пищи.</span></div>
-                <div class="food-step"><b>2</b><span>Проверь, есть ли в нём белковая часть.</span></div>
-                <div class="food-step"><b>3</b><span>Добавь её без запретов и компенсаций.</span></div>
+                <div class="food-step"><b>2</b><span>Посмотри, есть ли в нём белковый продукт.</span></div>
+                <div class="food-step"><b>3</b><span>Если нет, добавь его в следующий раз.</span></div>
               </div>
-              <p style="margin:24px 0 0">В Queenagers питание будет соединяться с тренировками, энергией и задачами конкретной недели.</p>
+              <p style="margin:24px 0 0">В Queenagers питание будет связано с тренировками, самочувствием и задачами конкретной недели.</p>
             </article>
           </div>
         </div>
@@ -347,11 +343,11 @@
 
       <section class="close" id="course">
         <div class="wrap close-grid">
-          <h2>Сильное тело для большой жизни.</h2>
+          <h2>Начать можно с одной недели.</h2>
           <div class="close-copy">
-            <p>Мы собираем Queenagers для женщин 45+: с последовательными силовыми тренировками, движением, питанием и знаниями, которые помогают оставаться активной по-своему.</p>
-            <p><strong>Тренироваться можно по-разному. Оставаться активной — по-своему.</strong></p>
-            <div class="actions"><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Узнать больше о #SEKTA <span>↗</span></a></div>
+            <p>Мы собираем Queenagers для женщин 45+: с силовыми тренировками, прогулками, питанием и знаниями, которые помогают лучше чувствовать себя в движении.</p>
+            <p><strong>Тренироваться можно по-разному. Важно найти свой ритм.</strong></p>
+            <div class="actions"><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Узнать больше о #SEKTA</a></div>
           </div>
         </div>
       </section>
@@ -359,8 +355,8 @@
 
     <footer>
       <div class="wrap footer-inner">
-        <span>#SEKTA × QUEENAGERS</span>
-        <span>Собери свою неделю · мини-план</span>
+        <span>#SEKTA / QUEENAGERS</span>
+        <span>Недельный план</span>
       </div>
     </footer>
   </div>
@@ -381,8 +377,8 @@
 
       const render = () => {
         display.textContent = format(seconds);
-        button.textContent = interval ? 'Пауза' : (phase === 'walk' ? 'Запустить' : 'Начать отдых');
-        status.textContent = phase === 'walk' ? 'После — 5 минут отдыха' : '5 минут отдыха';
+        button.textContent = interval ? 'Пауза' : (phase === 'walk' ? 'Начать прогулку' : 'Начать отдых');
+        status.textContent = phase === 'walk' ? 'После прогулки — пять минут отдыха' : 'Пять минут отдыха';
       };
 
       const finishPhase = () => {
@@ -396,7 +392,7 @@
         } else {
           phase = 'walk';
           seconds = 30 * 60;
-          status.textContent = 'Готово — можно остановиться или повторить';
+          status.textContent = 'Отдых завершён. Можно остановиться или повторить прогулку';
           render();
         }
       };
