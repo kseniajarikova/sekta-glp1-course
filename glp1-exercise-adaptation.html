@@ -95,6 +95,8 @@
         cards[2].remove();
         cards = [...result.querySelectorAll('.adapt-card')];
       }
+      const adaptGrid = result.querySelector('.adapt-grid');
+      if (adaptGrid && cards.length === 1) adaptGrid.style.gridTemplateColumns = 'minmax(0, 1fr)';
       cards.forEach((card, index) => {
         const paragraph = card.querySelector('.adapt-card-copy p');
         if (paragraph && item.texts[index]) paragraph.textContent = item.texts[index];
