@@ -24,7 +24,7 @@
       body { background:#e7f7ef; color:var(--white); }
       body::before { opacity:.08; background-image:linear-gradient(rgba(34,86,69,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(34,86,69,.08) 1px,transparent 1px); }
       .brand { background:transparent; box-shadow:none; }
-      .brand img { object-fit:contain; object-position:center top; clip-path:inset(0 0 12% 0); }
+      .brand img { object-fit:contain; object-position:center top; clip-path:inset(0 0 18% 0); }
       .hero { border-color:rgba(217,79,154,.24); background:linear-gradient(135deg,#f7fff9,#dff5e9); }
       .hero-copy > p { color:#36554b; }
       .eyebrow { color:#28785e; }
@@ -121,7 +121,7 @@
       const style = doc.createElement('style');
       style.textContent = theme;
       doc.head.append(style);
-      doc.querySelector('.hero-copy > p')?.replaceChildren('Выберите ситуацию, которая вам подходит, и посмотрите варианты адаптации упражнения.');
+      doc.querySelector('.hero-copy > p:not(.eyebrow)')?.replaceChildren('Выберите ситуацию, которая вам подходит, и посмотрите варианты адаптации упражнения.');
       doc.querySelector('.hero-card strong').textContent = 'Тренировка может подстраиваться под вас';
       doc.querySelector('.hero-card p').textContent = 'Опора, положение и амплитуда могут меняться. Сохраняйте внимание к технике и своему самочувствию.';
       doc.querySelector('.safety p').textContent = 'Если состояние ухудшается, появляются выраженная слабость, головокружение, предобморочное состояние, сильная или нарастающая боль, многократная рвота либо признаки обезвоживания, остановите тренировку и обратитесь за медицинской помощью.';
