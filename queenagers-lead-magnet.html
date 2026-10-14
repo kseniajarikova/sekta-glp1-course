@@ -151,6 +151,16 @@
     .sequence span { font-size: 14px; font-weight: 800; line-height: 1.05; }
     .workout-note { margin: 22px 0 0; padding: 16px 18px; border-left: 4px solid var(--violet); background: var(--lilac); font-size: 14px; }
 
+    .safety-note { margin: 20px 0 0; padding: 14px 18px; border-left: 4px solid var(--coral); background: #fff5ee; color: var(--ink); font-size: 14px; }
+    .day-detail { margin-top: 10px; color: var(--muted); font-size: 12px; }
+    .mobility-detail { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(25,23,29,.14); }
+    .mobility-detail h4 { margin: 0 0 8px; font-size: 15px; }
+    .mobility-detail > p { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+    .mobility-list { display: grid; gap: 9px; margin: 0; padding-left: 17px; }
+    .mobility-list li { padding-left: 2px; color: var(--muted); font-size: 11px; line-height: 1.35; }
+    .mobility-list b { display: block; margin-bottom: 2px; color: var(--ink); font-size: 12px; }
+    .mobility-list span { display: block; }
+    
     .food-section { background: var(--blue); }
     .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
     .food-card { padding: 32px; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--white); }
@@ -229,8 +239,8 @@
         <div class="wrap hero-grid">
           <div>
             <div class="eyebrow">Для женщин 45+</div>
-            <h1>Неделя, в которой есть <em>место движению</em></h1>
-            <p class="hero-copy">Силовая тренировка, прогулки и простая опора в питании — без гонки и необходимости соответствовать чужому темпу.</p>
+            <h1>Неделя движения<br>и заботы о себе</h1>
+            <p class="hero-copy">Силовая тренировка, прогулки и простая опора в питании — без гонки и необходимости ставить рекорды.</p>
             <p class="hero-subcopy">Здесь собран один из возможных ритмов: как поддерживать силу и подвижность и при этом оставлять в жизни место для всего остального.</p>
             <div class="actions">
               <a class="btn btn-primary" href="#workout">Посмотреть тренировку</a>
@@ -240,7 +250,7 @@
           <div class="hero-art" aria-label="Визуальная карточка лид-магнита">
             <div class="orb"></div>
             <div class="art-card">
-              <strong>Силовая тренировка<br>и три прогулки</strong>
+              <strong>Силовая тренировка<br>с основным и адаптированным<br>уровнем нагрузки,<br>а также три прогулки</strong>
               <p>Ритм, который можно подстроить под себя.</p>
             </div>
           </div>
@@ -250,8 +260,9 @@
       <section class="intro">
         <div class="wrap">
           <div class="intro-box">
-            <h2>Движение не должно занимать всю жизнь.</h2>
-            <p>В этой подборке мы соединяем настоящую нагрузку и понятную структуру с обычной жизнью. Начать можно с одной тренировки, нескольких прогулок и небольших изменений в питании — без требования быть идеальной.</p>
+            <h2>Движение не должно превращаться в подвиг.</h2>
+            <p>В этой подборке мы соединяем тренировочную нагрузку с обычными повседневными действиями. Начать заниматься можно с одной тренировки в неделю, нескольких прогулок и небольших изменений в питании — без требования к себе быть идеальной.</p>
+            <p class="safety-note"><b>О безопасности.</b> Выбирай комфортную амплитуду и темп. Если появляется боль, головокружение или становится плохо, остановись.</p>
           </div>
         </div>
       </section>
@@ -261,22 +272,22 @@
           <div class="section-head">
             <div>
               <div class="eyebrow">Пример недели</div>
-              <h2>Один силовой день, несколько прогулок и время на отдых.</h2>
+              <h2>Два тренировочных дня, мягкая кардионагрузка и время на отдых.</h2>
             </div>
-            <p>Так может выглядеть одна из недель. Её можно повторить целиком или выбрать из неё только то, что подходит тебе сейчас.</p>
+            <p>Так может выглядеть одна из недель. Её можно повторить целиком или выбрать только то, что подходит тебе сейчас.</p>
           </div>
 
           <div class="week-grid">
             <article class="day featured">
               <div class="day-top"><span class="day-name">Понедельник</span></div>
-              <div><h3>Силовая тренировка</h3><p>25 минут: суставная гимнастика, силовой блок и координация.</p><a class="day-link" href="#workout">Посмотреть тренировку</a></div>
+              <div><h3>Силовая тренировка</h3><p>25 минут: суставная гимнастика, силовой блок и координация.</p><p class="day-detail">Нужны кроссовки, топ с поддержкой груди, коврик и гантели весом 1–2 кг, если чувствуешь силы выполнять основной вариант упражнений.</p><a class="day-link" href="#workout">Посмотреть тренировку</a></div>
             </article>
-            <article class="day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Иди 30 минут в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>В другой день можно добавить упражнения для ягодиц, пресса и спины.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Четверг</span></div><div><h3>Прогулка</h3><p>Ещё 30 минут движения в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Пятница</span></div><div><h3>Мобильность</h3><p>Небольшая практика для подвижности суставов и равновесия.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Суббота</span></div><div><h3>Прогулка</h3><p>Можно пройтись одной, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div></div></article>
-            <article class="day rest"><div class="day-top"><span class="day-name">Воскресенье</span></div><div><h3>Отдых</h3><p>Сегодня можно ничего не планировать: посвятить время отдыху и заняться чем-то любимым.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Рекомендуем одеться удобно — спортивные брюки, ветровка, кроссовки, добавь слои одежды по погоде. Иди 30 минут в комфортном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку — потянись вверх за руками, сделай наклоны к ногам, понаблюдай за ощущениями в теле.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>Здесь та же тренировка и рекомендации:</p><p class="day-detail">Выполни силовую тренировку. Если в понедельник ты не использовала гантели — попробуй в этот раз с ними. Не торопись, выполняй все упражнения плавно, делай паузы, если это необходимо.</p><p class="day-detail">Если делала с утяжелителем — попробуй выполнить сегодня без него и понаблюдай за ощущениями: даётся ли тренировка легче? Какие мышцы ты чувствуешь особенно хорошо, получается ли успевать за тренером или хочется замедлиться, повторить какие-то из упражнений?</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Четверг</span></div><div><h3>Прогулка</h3><p>Ещё 30 минут движения в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку, как во вторник.</p></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Пятница</span></div><div><h3>Суставная разминка</h3><p>Небольшая разминка для подвижности суставов и равновесия.</p><div class="mobility-detail"><h4>Суставная разминка</h4><p>Каждое упражнение выполняй под счёт: считай от 1 до 8, затем повтори ещё раз. Если движение на обе стороны, повторяй счёт для каждой стороны.</p><ul class="mobility-list"><li><b>Дыхание и руки вверх</b><span>Встань удобно, стопы примерно на ширине таза, колени мягкие. На вдохе подними руки через стороны вверх и потянись макушкой к потолку. На выдохе опусти руки и слегка согни колени.</span></li><li><b>Плечи и грудная клетка</b><span>Разведи руки в стороны. На вдохе мягко раскрой грудь и сведи лопатки. На выдохе выведи руки вперёд и немного округли спину.</span></li><li><b>Запястья и локти</b><span>Вытяни руки перед собой и покрути кистями в одну сторону, затем в другую. Теперь согни руки и мягко разведи локти в стороны.</span></li><li><b>Повороты корпуса</b><span>Поставь руки перед собой. Поверни корпус немного вправо, вернись в центр, затем повернись влево. Таз направлен вперёд, движение небольшое и свободное.</span></li><li><b>Круги тазом</b><span>Положи руки на бёдра. Медленно нарисуй тазом круг в одну сторону, затем в другую. Колени слегка согнуты.</span></li><li><b>Тазобедренные суставы</b><span>Перенеси вес на одну ногу. Второе колено мягко подними перед собой и отведи немного в сторону, затем поставь стопу на пол. Поменяй ногу. Если неустойчиво, придерживайся за стену или спинку стула.</span></li><li><b>Колени</b><span>Поставь стопы чуть шире таза. Немного согни колени и выпрями их. Не опускайся глубоко — достаточно небольшого мягкого движения.</span></li><li><b>Стопы и голеностоп</b><span>Переноси вес с носков на пятки. Затем поднимай и опускай пятки, вставая на носки.</span></li><li><b>Марш на месте</b><span>Спокойно шагай на месте, по очереди поднимая колени. Руки свободно двигаются рядом с корпусом, дыши ровно.</span></li></ul></div></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Суббота</span></div><div><h3>Прогулка</h3><p>Можно пройтись одной, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки удели внимание растяжке.</p></div></article>
+            <article class="day rest"><div class="day-top"><span class="day-name">Воскресенье</span></div><div><h3>Отдых</h3><p>Сегодня можно ничего не планировать по тренировкам: посвяти время отдыху и займись чем-то любимым.</p></div></article>
           </div>
         </div>
       </section>
@@ -297,16 +308,16 @@
               <h3>Силовая<br>на всё тело</h3>
             </div>
             <div class="workout-info">
-              <div class="meta"><span>25 минут</span><span>гантели</span><span>Алла, мама Оли Маркес</span></div>
+              <div class="meta"><span>25 минут</span><span>гантели</span><span>Алла, мама Оли Маркес, Даша Князева</span></div>
               <h2>Силовая на всё тело</h2>
-              <p>В начале — суставная гимнастика, затем силовой блок на всё тело и спокойное завершение с упражнениями на координацию. Тренировку ведёт Алла, мама Оли Маркес.</p>
+              <p>В начале — суставная гимнастика, затем силовой блок на всё тело и спокойное завершение с упражнениями на координацию. Тренировку ведут руководитель тренировки отдела #Sекта Даша Князева и Алла, мама Оли Маркес.</p>
               <div class="sequence" aria-label="Структура тренировки">
                 <div><b>Начало</b><span>Суставная гимнастика</span></div>
                 <div><b>Основная часть</b><span>Силовой блок на всё тело</span></div>
                 <div><b>Завершение</b><span>Упражнения на координацию</span></div>
               </div>
               <a class="btn btn-primary" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a>
-              <div class="workout-note"><b>Выбирай подходящий объём.</b> Можно выполнить всю тренировку или остановиться раньше. Важно, чтобы нагрузка подходила тебе сегодня.</div>
+              <div class="workout-note"><b>Выбирай подходящий объём.</b> Можно выполнить всю тренировку или остановиться раньше. Важно, чтобы нагрузка подходила тебе сегодня. Есть основной и адаптированный уровень нагрузки.</div>
             </div>
           </div>
         </div>
@@ -317,23 +328,25 @@
           <div class="section-head">
             <div>
               <div class="eyebrow">Питание</div>
-              <h2>Поддерживать себя можно с простых вещей.</h2>
+              <h2>Поддерживать организм можно привычными продуктами и простыми блюдами.</h2>
             </div>
-            <p>Один понятный ориентир вместо новой диеты и длинного списка запретов.</p>
+            <p>Достаточно добавить один ориентир вместо введения «диеты» и длинного списка запретов.</p>
           </div>
           <div class="food-grid">
             <article class="food-card accent">
               <span class="mini-pill">Один ориентир</span>
-              <h3>Пусть в одном из привычных приёмов пищи будет что-то белковое.</h3>
-              <p>Это может быть обычная еда: яйца, рыба, птица, мясо, бобовые или молочные продукты. Не нужно менять весь рацион за один день.</p>
-              <div class="food-example"><span>яйца</span><span>рыба</span><span>птица</span><span>мясо</span><span>бобовые</span><span>молочные продукты</span></div>
+              <h3>С чего начать?</h3>
+              <p>Силовая тренировка запускает рост мышц, но строить их телу не из чего, если в еде мало белка.</p>
+              <p>На этой неделе каждый день добавляй белковую порцию в обед и в ужин — каждый день этой недели.</p>
+              <p><b>Белковая порция — это примерно столько:</b></p>
+              <div class="food-example"><span>кусок рыбы или мяса размером с ладонь</span><span>два-три яйца</span><span>пачка творога</span><span>стакан греческого йогурта</span><span>тарелка чечевицы или фасоли</span></div>
             </article>
             <article class="food-card">
-              <span class="eyebrow">Как начать</span>
+              <span class="eyebrow">Ориентир на неделю</span>
               <div class="food-steps">
-                <div class="food-step"><b>1</b><span>Выбери один привычный приём пищи.</span></div>
-                <div class="food-step"><b>2</b><span>Посмотри, есть ли в нём белковый продукт.</span></div>
-                <div class="food-step"><b>3</b><span>Если нет, добавь его в следующий раз.</span></div>
+                <div class="food-step"><b>1</b><span>Добавляй белковую порцию в обед.</span></div>
+                <div class="food-step"><b>2</b><span>Добавляй белковую порцию в ужин.</span></div>
+                <div class="food-step"><b>3</b><span>Считать граммы и взвешивать ничего не нужно, достаточно посмотреть на тарелку.</span></div>
               </div>
               <p style="margin:24px 0 0">Питание можно связать с тренировками, самочувствием и задачами конкретной недели.</p>
             </article>
@@ -345,7 +358,7 @@
         <div class="wrap close-grid">
           <h2>Начать можно с одной недели.</h2>
           <div class="close-copy">
-            <p>Силовые тренировки, прогулки, питание и знания могут постепенно стать частью твоего ритма и помогать лучше чувствовать себя в движении.</p>
+            <p>Силовые тренировки, прогулки и питание могут постепенно стать частью твоего образа жизни и помогать лучше чувствовать себя в движении.</p>
             <p><strong>Тренироваться можно по-разному. Важно найти свой ритм.</strong></p>
             <div class="actions"><a class="btn btn-primary" href="https://sektaschool.ru/" target="_blank" rel="noopener">Узнать больше о #SEKTA</a></div>
           </div>
