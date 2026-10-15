@@ -110,12 +110,14 @@
     .section-head p { max-width: 350px; margin: 0; color: var(--muted); }
 
     .week-section { background: var(--lilac); }
-    .week-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; }
+    .week-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
     .day {
       min-height: 164px; padding: 20px; border: 1px solid var(--ink); border-radius: 19px; background: var(--white);
       display: flex; flex-direction: column; justify-content: space-between;
     }
-    .day.featured { grid-column: span 2; min-height: 228px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .day.featured { min-height: 420px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .day.primary-day { min-height: 420px; }
+    .day.rest { grid-column: 2; }
     .day.rest { background: var(--ink); color: #fff; }
     .day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .day-name { font-size: 13px; font-weight: 800; }
@@ -192,16 +194,16 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 18px; }
 
     @media (max-width: 1100px) and (min-width: 901px) {
-      .week-grid { grid-template-columns: repeat(3, 1fr); }
-      .day.featured { grid-column: span 2; }
+      .week-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
     @media (max-width: 900px) {
       .hero-grid, .workout-layout, .close-grid { grid-template-columns: 1fr; gap: 35px; }
       .hero { padding-top: 55px; }
       .hero-art { min-height: 370px; max-width: 600px; width: 100%; margin: 0 auto; }
-      .week-grid { grid-template-columns: repeat(2, 1fr); }
+      .week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .day.featured { grid-column: span 2; }
+      .day.rest { grid-column: auto; }
       .close-grid { align-items: start; }
     }
     @media (max-width: 620px) {
@@ -221,7 +223,8 @@
       .section-head { display: block; margin-bottom: 27px; }
       .section-head h2 { margin: 15px 0 17px; }
       .week-grid { grid-template-columns: 1fr; gap: 12px; }
-      .day, .day.featured { grid-column: span 1; min-height: auto; padding: 20px; }
+      .day, .day.featured, .day.primary-day { grid-column: span 1; min-height: auto; padding: 20px; }
+      .day.rest { grid-column: auto; }
       .day.featured { box-shadow: 5px 5px 0 var(--ink); }
       .day-top { margin-bottom: 7px; }
       .day h3 { margin: 10px 0 7px; font-size: 23px; }
@@ -306,8 +309,8 @@
               <div class="day-top"><span class="day-name">Понедельник</span></div>
               <div><h3>Силовая тренировка</h3><p>25 минут: суставная гимнастика, силовой блок и координация.</p><p class="day-detail">Нужны кроссовки, топ с поддержкой груди, коврик и гантели весом 1–2 кг, если чувствуешь силы выполнять основной вариант упражнений.</p><a class="day-link" href="#workout">Посмотреть тренировку</a></div>
             </article>
-            <article class="day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Рекомендуем одеться удобно — спортивные брюки, ветровка, кроссовки, добавь слои одежды по погоде. Иди 30 минут в комфортном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку — потянись вверх за руками, сделай наклоны к ногам, понаблюдай за ощущениями в теле.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>Здесь та же тренировка и рекомендации:</p><p class="day-detail">Выполни силовую тренировку. Если в понедельник ты не использовала гантели — попробуй в этот с ними. Не торопись, выполняй все упражнения плавно, делай паузы, если это необходимо.</p><p class="day-detail">Если делала с утяжелителем — попробуй выполнить сегодня без него и понаблюдай за ощущениями: даётся ли тренировка легче? Какие мышцы ты чувствуешь особенно хорошо, получается ли успевать за тренером или хочется замедлиться, повторить какие-то из упражнений?</p><a class="day-link" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a></div></article>
+            <article class="day primary-day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Рекомендуем одеться удобно — спортивные брюки, ветровка, кроссовки, добавь слои одежды по погоде. Иди 30 минут в комфортном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку — потянись вверх за руками, сделай наклоны к ногам, понаблюдай за ощущениями в теле.</p></div></article>
+            <article class="day primary-day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>Здесь та же тренировка и рекомендации:</p><p class="day-detail">Выполни силовую тренировку. Если в понедельник ты не использовала гантели — попробуй в этот с ними. Не торопись, выполняй все упражнения плавно, делай паузы, если это необходимо.</p><p class="day-detail">Если делала с утяжелителем — попробуй выполнить сегодня без него и понаблюдай за ощущениями: даётся ли тренировка легче? Какие мышцы ты чувствуешь особенно хорошо, получается ли успевать за тренером или хочется замедлиться, повторить какие-то из упражнений?</p><a class="day-link" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Четверг</span></div><div><h3>Прогулка</h3><p>Ещё 30 минут движения в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку, как во вторник.</p></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Пятница</span></div><div><h3>Суставная разминка</h3><p>Небольшая разминка для подвижности суставов и равновесия.</p><details class="mobility-detail"><summary>Открыть разминку <span>9 упражнений</span></summary><div class="mobility-content"><p>Каждое упражнение выполняй под счёт: считай от 1 до 8, затем повтори ещё раз. Если движение на обе стороны, повторяй счёт для каждой стороны.</p><ul class="mobility-list"><li><b>Дыхание и руки вверх</b><span>Встань удобно, стопы примерно на ширине таза, колени мягкие. На вдохе подними руки через стороны вверх и потянись макушкой к потолку. На выдохе опусти руки и слегка согни колени.</span></li><li><b>Плечи и грудная клетка</b><span>Разведи руки в стороны. На вдохе мягко раскрой грудь и сведи лопатки. На выдохе выведи руки вперёд и немного округли спину.</span></li><li><b>Запястья и локти</b><span>Вытяни руки перед собой и покрути кистями в одну сторону, затем в другую. Теперь согни руки и мягко разведи локти в стороны.</span></li><li><b>Повороты корпуса</b><span>Поставь руки перед собой. Поверни корпус немного вправо, вернись в центр, затем повернись влево. Таз направлен вперёд, движение небольшое и свободное.</span></li><li><b>Круги тазом</b><span>Положи руки на бёдра. Медленно нарисуй тазом круг в одну сторону, затем в другую. Колени слегка согнуты.</span></li><li><b>Тазобедренные суставы</b><span>Перенеси вес на одну ногу. Второе колено мягко подними перед собой и отведи немного в сторону, затем поставь стопу на пол. Поменяй ногу. Если неустойчиво, придерживайся за стену или спинку стула.</span></li><li><b>Колени</b><span>Поставь стопы чуть шире таза. Немного согни колени и выпрями их. Не опускайся глубоко — достаточно небольшого мягкого движения.</span></li><li><b>Стопы и голеностоп</b><span>Переноси вес с носков на пятки. Затем поднимай и опускай пятки, вставая на носки.</span></li><li><b>Марш на месте</b><span>Спокойно шагай на месте, по очереди поднимая колени. Руки свободно двигаются рядом с корпусом, дыши ровно.</span></li></ul></div></details></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Суббота</span></div><div><h3>Прогулка</h3><p>Можно пройтись одной, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки удели внимание растяжке.</p></div></article>
