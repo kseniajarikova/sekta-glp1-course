@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Один из возможных ритмов Queenagers для женщин 45+: силовая тренировка, прогулки и простая опора в питании.">
+  <meta name="description" content="Один из возможных планов Queenagers: силовая тренировка, прогулки и простая опора в питании.">
   <title>Собери свою неделю — Queenagers × #SEKTA</title>
   <style>
     :root {
@@ -20,7 +20,7 @@
       --line: rgba(23, 21, 29, .14);
       --shadow: 8px 9px 0 var(--ink);
       --radius: 28px;
-      --max: 1180px;
+      --max: 1240px;
     }
 
     * { box-sizing: border-box; }
@@ -36,6 +36,7 @@
     button, a { -webkit-tap-highlight-color: transparent; }
     .page { overflow: hidden; }
     .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .hero-grid > *, .workout-layout > *, .food-grid > *, .close-grid > *, .day { min-width: 0; }
 
     .topbar {
       padding: 18px 0;
@@ -46,8 +47,8 @@
     .brand span { color: var(--violet); }
     .top-note { color: var(--muted); font-size: 13px; text-align: right; }
 
-    .hero { padding: 72px 0 86px; }
-    .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 70px; align-items: center; }
+    .hero { padding: 58px 0 68px; }
+    .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 54px; align-items: center; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       color: var(--violet-dark); font-size: 14px; font-weight: 800;
@@ -74,7 +75,7 @@
     .btn-primary { background: var(--acid); }
     .btn-secondary { background: transparent; }
 
-    .hero-art { position: relative; min-height: 430px; }
+    .hero-art { position: relative; min-height: 360px; }
     .orb {
       position: absolute; width: 360px; height: 360px; right: 4%; top: 12px;
       border-radius: 50%; background: var(--violet); transform: rotate(-8deg);
@@ -94,7 +95,7 @@
     .art-card p { margin: 0; color: var(--muted); font-size: 14px; }
     .mini-pill { display: inline-flex; align-items: center; padding: 7px 10px; background: var(--coral); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 800; }
 
-    .intro { padding: 28px 0 84px; }
+    .intro { padding: 20px 0 60px; }
     .intro-box {
       display: grid; grid-template-columns: .7fr 1.3fr; gap: 45px; align-items: start;
       padding: 45px; border-radius: var(--radius); background: var(--ink); color: #fff;
@@ -103,18 +104,18 @@
     .intro-box p { max-width: 620px; margin: 0; color: #d6d2dc; font-size: 19px; }
     .intro-box b { color: #fff; }
 
-    .section { padding: 85px 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+    .section { padding: 64px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
     .section-head h2 { max-width: 650px; margin: 0; font-size: clamp(39px, 6vw, 75px); line-height: .9; letter-spacing: -.085em; }
     .section-head p { max-width: 350px; margin: 0; color: var(--muted); }
 
     .week-section { background: var(--lilac); }
     .week-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .day {
-      min-height: 196px; padding: 20px; border: 1px solid var(--ink); border-radius: 19px; background: var(--white);
+      min-height: 164px; padding: 20px; border: 1px solid var(--ink); border-radius: 19px; background: var(--white);
       display: flex; flex-direction: column; justify-content: space-between;
     }
-    .day.featured { grid-column: span 2; min-height: 280px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .day.featured { grid-column: span 2; min-height: 228px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
     .day.rest { background: var(--ink); color: #fff; }
     .day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .day-name { font-size: 13px; font-weight: 800; }
@@ -135,7 +136,7 @@
 
     .workout-section { background: var(--coral); }
     .workout-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 26px; align-items: stretch; }
-    .workout-visual { position: relative; min-height: 470px; padding: 30px; overflow: hidden; border-radius: var(--radius); background: var(--violet); color: #fff; }
+    .workout-visual { position: relative; min-height: 400px; padding: 30px; overflow: hidden; border-radius: var(--radius); background: var(--violet); color: #fff; }
     .workout-visual::before { content: ""; position: absolute; width: 300px; height: 300px; right: -70px; bottom: -100px; border-radius: 50%; border: 45px solid var(--acid); opacity: .95; }
     .workout-visual::after { content: "25 мин."; position: absolute; right: 21px; bottom: 39px; font-size: 104px; line-height: .8; font-weight: 950; letter-spacing: -.09em; color: var(--ink); }
     .workout-visual h3 { position: relative; z-index: 1; max-width: 300px; margin: 35px 0 0; color: var(--ink); font-size: 53px; line-height: .87; letter-spacing: -.08em; }
@@ -180,8 +181,8 @@
     .food-example { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .food-example span { padding: 9px 11px; border-radius: 10px; background: var(--paper); font-size: 13px; font-weight: 800; }
 
-    .close { padding: 86px 0 100px; background: var(--ink); color: #fff; }
-    .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: end; }
+    .close { padding: 64px 0 76px; background: var(--ink); color: #fff; }
+    .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
     .close h2 { max-width: 760px; margin: 0; color: var(--acid); font-size: clamp(43px, 7vw, 88px); line-height: .87; letter-spacing: -.09em; }
     .close-copy { color: #d0ccd5; font-size: 17px; }
     .close-copy strong { color: #fff; }
@@ -189,6 +190,11 @@
     .close .btn-primary { color: var(--ink) !important; }
     footer { padding: 22px 0; background: var(--ink); border-top: 1px solid rgba(255,255,255,.14); color: #a9a4b0; font-size: 12px; }
     .footer-inner { display: flex; justify-content: space-between; gap: 18px; }
+
+    @media (max-width: 1100px) and (min-width: 901px) {
+      .week-grid { grid-template-columns: repeat(3, 1fr); }
+      .day.featured { grid-column: span 2; }
+    }
 
     @media (max-width: 900px) {
       .hero-grid, .workout-layout, .close-grid { grid-template-columns: 1fr; gap: 35px; }
@@ -259,7 +265,7 @@
           <div>
             <h1>Неделя движения<br>и заботы о себе</h1>
             <p class="hero-copy">Силовая тренировка, прогулки и простая опора в питании — без гонки и необходимости ставить рекорды.</p>
-            <p class="hero-subcopy">Здесь собран один из возможных ритмов: как поддерживать силу и подвижность и при этом оставлять в жизни место для всего остального.</p>
+            <p class="hero-subcopy">Здесь собран один из возможных планов на неделю: как поддерживать силу и подвижность и при этом оставлять в жизни место для всего остального.</p>
             <div class="actions">
               <a class="btn btn-primary" href="#workout">Посмотреть тренировку</a>
               <a class="btn btn-secondary" href="#plan">Посмотреть неделю</a>
@@ -280,7 +286,7 @@
           <div class="intro-box">
             <h2>Движение не должно превращаться в подвиг.</h2>
             <p>В этой подборке мы соединяем тренировочную нагрузку с обычными повседневными действиями. Начать заниматься можно с одной тренировки в неделю, нескольких прогулок и небольших изменений в питании — без требования к себе быть идеальной.</p>
-            <p class="safety-note"><b>О безопасности.</b> Выбирай комфортную амплитуду и темп. Если появляется боль, головокружение или становится плохо, остановись.</p>
+            <p class="safety-note"><b>Предупреждение о безопасности тренировок:</b> выбирай комфортную амплитуду и темп. Если появляется боль, головокружение или становится плохо, остановись.</p>
           </div>
         </div>
       </section>
@@ -301,7 +307,7 @@
               <div><h3>Силовая тренировка</h3><p>25 минут: суставная гимнастика, силовой блок и координация.</p><p class="day-detail">Нужны кроссовки, топ с поддержкой груди, коврик и гантели весом 1–2 кг, если чувствуешь силы выполнять основной вариант упражнений.</p><a class="day-link" href="#workout">Посмотреть тренировку</a></div>
             </article>
             <article class="day"><div class="day-top"><span class="day-name">Вторник</span></div><div><h3>Прогулка</h3><p>Рекомендуем одеться удобно — спортивные брюки, ветровка, кроссовки, добавь слои одежды по погоде. Иди 30 минут в комфортном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку — потянись вверх за руками, сделай наклоны к ногам, понаблюдай за ощущениями в теле.</p></div></article>
-            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>Здесь та же тренировка и рекомендации:</p><p class="day-detail">Выполни силовую тренировку. Если в понедельник ты не использовала гантели — попробуй в этот раз с ними. Не торопись, выполняй все упражнения плавно, делай паузы, если это необходимо.</p><p class="day-detail">Если делала с утяжелителем — попробуй выполнить сегодня без него и понаблюдай за ощущениями: даётся ли тренировка легче? Какие мышцы ты чувствуешь особенно хорошо, получается ли успевать за тренером или хочется замедлиться, повторить какие-то из упражнений?</p><a class="day-link" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a></div></article>
+            <article class="day"><div class="day-top"><span class="day-name">Среда</span></div><div><h3>Силовая тренировка</h3><p>Здесь та же тренировка и рекомендации:</p><p class="day-detail">Выполни силовую тренировку. Если в понедельник ты не использовала гантели — попробуй в этот с ними. Не торопись, выполняй все упражнения плавно, делай паузы, если это необходимо.</p><p class="day-detail">Если делала с утяжелителем — попробуй выполнить сегодня без него и понаблюдай за ощущениями: даётся ли тренировка легче? Какие мышцы ты чувствуешь особенно хорошо, получается ли успевать за тренером или хочется замедлиться, повторить какие-то из упражнений?</p><a class="day-link" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Четверг</span></div><div><h3>Прогулка</h3><p>Ещё 30 минут движения в удобном темпе.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки сделай небольшую растяжку, как во вторник.</p></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Пятница</span></div><div><h3>Суставная разминка</h3><p>Небольшая разминка для подвижности суставов и равновесия.</p><details class="mobility-detail"><summary>Открыть разминку <span>9 упражнений</span></summary><div class="mobility-content"><p>Каждое упражнение выполняй под счёт: считай от 1 до 8, затем повтори ещё раз. Если движение на обе стороны, повторяй счёт для каждой стороны.</p><ul class="mobility-list"><li><b>Дыхание и руки вверх</b><span>Встань удобно, стопы примерно на ширине таза, колени мягкие. На вдохе подними руки через стороны вверх и потянись макушкой к потолку. На выдохе опусти руки и слегка согни колени.</span></li><li><b>Плечи и грудная клетка</b><span>Разведи руки в стороны. На вдохе мягко раскрой грудь и сведи лопатки. На выдохе выведи руки вперёд и немного округли спину.</span></li><li><b>Запястья и локти</b><span>Вытяни руки перед собой и покрути кистями в одну сторону, затем в другую. Теперь согни руки и мягко разведи локти в стороны.</span></li><li><b>Повороты корпуса</b><span>Поставь руки перед собой. Поверни корпус немного вправо, вернись в центр, затем повернись влево. Таз направлен вперёд, движение небольшое и свободное.</span></li><li><b>Круги тазом</b><span>Положи руки на бёдра. Медленно нарисуй тазом круг в одну сторону, затем в другую. Колени слегка согнуты.</span></li><li><b>Тазобедренные суставы</b><span>Перенеси вес на одну ногу. Второе колено мягко подними перед собой и отведи немного в сторону, затем поставь стопу на пол. Поменяй ногу. Если неустойчиво, придерживайся за стену или спинку стула.</span></li><li><b>Колени</b><span>Поставь стопы чуть шире таза. Немного согни колени и выпрями их. Не опускайся глубоко — достаточно небольшого мягкого движения.</span></li><li><b>Стопы и голеностоп</b><span>Переноси вес с носков на пятки. Затем поднимай и опускай пятки, вставая на носки.</span></li><li><b>Марш на месте</b><span>Спокойно шагай на месте, по очереди поднимая колени. Руки свободно двигаются рядом с корпусом, дыши ровно.</span></li></ul></div></details></div></article>
             <article class="day"><div class="day-top"><span class="day-name">Суббота</span></div><div><h3>Прогулка</h3><p>Можно пройтись одной, с подругой или по дороге по делам.</p><div class="walk-timer" data-walk-timer><div class="timer-display" aria-live="polite">30:00</div><div class="timer-controls"><button class="timer-button" type="button">Начать прогулку</button><span class="timer-status">После прогулки — пять минут отдыха</span></div></div><p class="day-detail">После прогулки удели внимание растяжке.</p></div></article>
@@ -334,7 +340,7 @@
                 <div><b>Завершение</b><span>Упражнения на координацию</span></div>
               </div>
               <a class="btn btn-primary" href="https://kinescope.io/4uTGpVeq9AWLF1FfnjQQEz" target="_blank" rel="noopener">Посмотреть тренировку</a>
-              <div class="workout-note"><b>Выбирай подходящий объём.</b> Можно выполнить всю тренировку или остановиться раньше. Важно, чтобы нагрузка подходила тебе сегодня. Есть основной и адаптированный уровень нагрузки.</div>
+              <div class="workout-note"><b>Выбирай подходящий объём.</b> Можно выполнить всю тренировку или остановиться раньше. Важно, чтобы нагрузка подходила тебе сегодня.</div>
             </div>
           </div>
         </div>
@@ -356,7 +362,7 @@
               <p>Силовая тренировка запускает рост мышц, но строить их телу не из чего, если в еде мало белка.</p>
               <p>На этой неделе каждый день добавляй белковую порцию в обед и в ужин — каждый день этой недели.</p>
               <p><b>Белковая порция — это примерно столько:</b></p>
-              <div class="food-example"><span>кусок рыбы или мяса размером с ладонь</span><span>два-три яйца</span><span>пачка творога</span><span>стакан греческого йогурта</span><span>тарелка чечевицы или фасоли</span></div>
+              <div class="food-example"><span>Кусок рыбы или мяса размером с ладонь</span><span>Два-три яйца</span><span>Пачка творога</span><span>Стакан греческого йогурта</span><span>Тарелка чечевицы или фасоли</span></div>
             </article>
             <article class="food-card">
               <span class="eyebrow">Ориентир на неделю</span>
@@ -365,7 +371,7 @@
                 <div class="food-step"><b>2</b><span>Добавляй белковую порцию в ужин.</span></div>
                 <div class="food-step"><b>3</b><span>Считать граммы и взвешивать ничего не нужно, достаточно посмотреть на тарелку.</span></div>
               </div>
-              <p style="margin:24px 0 0">Питание можно связать с тренировками, самочувствием и задачами конкретной недели.</p>
+              <p style="margin:24px 0 0">Считать граммы и взвешивать ничего не нужно, достаточно посмотреть на тарелку.</p>
             </article>
           </div>
         </div>
