@@ -51,7 +51,7 @@
     .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 54px; align-items: center; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      color: var(--violet-dark); font-size: 16px; line-height: 1.15; font-weight: 800;
+      color: var(--violet-dark); font-size: 17px; line-height: 1.15; font-weight: 800;
     }
     h1, h2, h3, p { margin-top: 0; }
     h1 {
@@ -106,14 +106,14 @@
 
     .section { padding: 64px 0; }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
-    .section-head h2 { max-width: 640px; margin: 0; font-size: clamp(35px, 5.2vw, 66px); line-height: .96; letter-spacing: -.07em; }
+    .section-head h2 { max-width: 640px; margin: 0; font-size: clamp(34px, 4.8vw, 60px); line-height: 1; letter-spacing: -.07em; }
     .section-head p { max-width: 360px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.4; }
 
     .week-section { background: var(--lilac); }
     .week-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
     .day {
       min-height: 164px; padding: 20px; border: 1px solid var(--ink); border-radius: 19px; background: var(--white);
-      display: flex; flex-direction: column; justify-content: space-between;
+      display: flex; flex-direction: column; justify-content: flex-start;
     }
     .day.featured { min-height: 420px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
     .day.primary-day { min-height: 420px; }
@@ -185,7 +185,7 @@
     .food-example span { padding: 9px 11px; border-radius: 10px; background: var(--paper); font-size: 13px; font-weight: 800; }
 
     .close { padding: 64px 0 76px; background: var(--ink); color: #fff; }
-    .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
+    .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: start; }
     .close h2 { max-width: 760px; margin: 0; color: var(--acid); font-size: clamp(40px, 6.4vw, 76px); line-height: .94; letter-spacing: -.08em; }
     .close-copy { color: #d0ccd5; font-size: 17px; }
     .close-copy strong { color: #fff; }
