@@ -51,7 +51,7 @@
     .hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 54px; align-items: center; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
-      color: var(--violet-dark); font-size: 14px; font-weight: 800;
+      color: var(--violet-dark); font-size: 16px; line-height: 1.15; font-weight: 800;
     }
     h1, h2, h3, p { margin-top: 0; }
     h1 {
@@ -97,8 +97,8 @@
 
     .intro { padding: 20px 0 60px; }
     .intro-box {
-      display: grid; grid-template-columns: .7fr 1.3fr; gap: 45px; align-items: start;
-      padding: 45px; border-radius: var(--radius); background: var(--ink); color: #fff;
+      display: grid; grid-template-columns: .72fr 1.28fr; gap: 40px; align-items: start;
+      padding: 40px; border-radius: var(--radius); background: var(--ink); color: #fff;
     }
     .intro-box h2 { max-width: 330px; margin: 0; color: var(--acid); font-size: clamp(31px, 4vw, 52px); line-height: .94; letter-spacing: -.07em; }
     .intro-box p { max-width: 620px; margin: 0; color: #d6d2dc; font-size: 19px; }
@@ -106,8 +106,8 @@
 
     .section { padding: 64px 0; }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
-    .section-head h2 { max-width: 650px; margin: 0; font-size: clamp(39px, 6vw, 75px); line-height: .9; letter-spacing: -.085em; }
-    .section-head p { max-width: 350px; margin: 0; color: var(--muted); }
+    .section-head h2 { max-width: 640px; margin: 0; font-size: clamp(35px, 5.2vw, 66px); line-height: .96; letter-spacing: -.07em; }
+    .section-head p { max-width: 360px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.4; }
 
     .week-section { background: var(--lilac); }
     .week-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
@@ -122,7 +122,7 @@
     .day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .day-name { font-size: 13px; font-weight: 800; }
     .day-mark { font-size: 20px; }
-    .day h3 { margin: 25px 0 5px; font-size: 24px; line-height: 1; letter-spacing: -.05em; }
+    .day h3 { margin: 24px 0 8px; font-size: 22px; line-height: 1.08; letter-spacing: -.05em; }
     .day p { margin: 0; color: var(--muted); font-size: 14px; }
     .rest p { color: #c9c5cf; }
     .day-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 18px; font-size: 13px; font-weight: 900; text-decoration: none; }
@@ -142,12 +142,12 @@
     .workout-visual { position: relative; min-height: 400px; padding: 30px; overflow: hidden; border-radius: var(--radius); background: var(--violet); color: #fff; }
     .workout-visual::before { content: ""; position: absolute; width: 300px; height: 300px; right: -70px; bottom: -100px; border-radius: 50%; border: 45px solid var(--acid); opacity: .95; }
     .workout-visual::after { content: "25 мин."; position: absolute; right: 21px; bottom: 39px; font-size: 104px; line-height: .8; font-weight: 950; letter-spacing: -.09em; color: var(--ink); }
-    .workout-visual h3 { position: relative; z-index: 1; max-width: 300px; margin: 35px 0 0; color: var(--ink); font-size: 53px; line-height: .87; letter-spacing: -.08em; }
+    .workout-visual h3 { position: relative; z-index: 1; max-width: 300px; margin: 35px 0 0; color: var(--ink); font-size: 48px; line-height: .92; letter-spacing: -.075em; }
     .workout-visual .mini-pill { position: relative; z-index: 1; background: var(--acid); color: var(--ink); }
     .workout-info { padding: 35px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--ink); }
     .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
     .meta span { padding: 8px 11px; border-radius: 999px; background: var(--blue); font-size: 12px; font-weight: 900; }
-    .workout-info h2 { margin-bottom: 14px; font-size: clamp(34px, 5vw, 60px); line-height: .9; letter-spacing: -.08em; }
+    .workout-info h2 { margin-bottom: 14px; font-size: clamp(34px, 4.7vw, 56px); line-height: .96; letter-spacing: -.075em; }
     .workout-info > p { max-width: 570px; color: var(--muted); font-size: 17px; }
     .sequence { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 29px 0; }
     .sequence div { min-height: 95px; padding: 15px; border-radius: 16px; background: var(--paper); }
@@ -155,7 +155,7 @@
     .sequence span { font-size: 14px; font-weight: 800; line-height: 1.05; }
     .workout-note { margin: 22px 0 0; padding: 16px 18px; border-left: 4px solid var(--violet); background: var(--lilac); font-size: 14px; }
 
-    .safety-note { margin: 20px 0 0; padding: 14px 18px; border-left: 4px solid var(--coral); background: #fff5ee; color: #19171d !important; font-size: 14px; }
+    .safety-note { grid-column: 1 / -1; width: 100%; max-width: 650px; margin: 4px 0 0; padding: 14px 18px; border-left: 4px solid var(--coral); background: #fff5ee; color: #19171d !important; font-size: 14px; line-height: 1.45; }
     .safety-note b { color: #19171d !important; }
     .day-detail { margin-top: 10px; color: var(--muted); font-size: 12px; }
     .mobility-detail { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(25,23,29,.14); }
@@ -171,10 +171,10 @@
     .mobility-list span { display: block; }
     
     .food-section { background: var(--blue); }
-    .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-    .food-card { padding: 32px; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--white); }
+    .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+    .food-card { height: 100%; padding: 32px; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--white); }
     .food-card.accent { background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
-    .food-card h3 { margin: 18px 0 10px; font-size: 31px; line-height: .95; letter-spacing: -.06em; }
+    .food-card h3 { margin: 18px 0 10px; font-size: 34px; line-height: 1; letter-spacing: -.06em; }
     .food-card p { color: var(--muted); }
     .accent p { color: var(--ink); }
     .food-steps { display: grid; gap: 12px; margin-top: 22px; }
@@ -186,7 +186,7 @@
 
     .close { padding: 64px 0 76px; background: var(--ink); color: #fff; }
     .close-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
-    .close h2 { max-width: 760px; margin: 0; color: var(--acid); font-size: clamp(43px, 7vw, 88px); line-height: .87; letter-spacing: -.09em; }
+    .close h2 { max-width: 760px; margin: 0; color: var(--acid); font-size: clamp(40px, 6.4vw, 76px); line-height: .94; letter-spacing: -.08em; }
     .close-copy { color: #d0ccd5; font-size: 17px; }
     .close-copy strong { color: #fff; }
     .close .btn-secondary { color: #fff; border-color: rgba(255,255,255,.45); }
@@ -222,7 +222,7 @@
       .intro, .section { padding: 58px 0; }
       .intro-box { grid-template-columns: 1fr; gap: 22px; padding: 27px; }
       .section-head { display: block; margin-bottom: 27px; }
-      .section-head h2 { margin: 15px 0 17px; }
+      .section-head h2 { margin: 15px 0 17px; font-size: clamp(35px, 11vw, 52px); line-height: .96; }
       .week-grid { grid-template-columns: 1fr; gap: 12px; }
       .day, .day.featured, .day.primary-day { grid-column: span 1; min-height: auto; padding: 20px; }
       .day.rest { grid-column: auto; }
@@ -243,9 +243,9 @@
       .mobility-list li { font-size: 12px; line-height: 1.42; }
       .mobility-list b { font-size: 13px; }
       .workout-visual { min-height: 300px; padding: 24px; }
-      .workout-visual h3 { margin-top: 28px; font-size: 45px; }
+      .workout-visual h3 { margin-top: 28px; font-size: 43px; line-height: .92; }
       .workout-visual::after { right: 15px; bottom: 32px; font-size: 64px; letter-spacing: -.08em; }
-      .workout-info, .food-card { padding: 24px; }
+      .workout-info, .food-card { height: auto; padding: 24px; }
       .sequence { grid-template-columns: 1fr; }
       .sequence div { min-height: auto; }
       .food-grid { grid-template-columns: 1fr; gap: 14px; }
